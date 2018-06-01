@@ -1,4 +1,4 @@
-const OmoreCollege = Object.create({}, {
+const omoreCollege = Object.create({}, {
     business: {
         enumerable: true,
         writable: false,
@@ -26,9 +26,9 @@ const OmoreCollege = Object.create({}, {
         value: "Long commute"
     }
 })
-console.log(OmoreCollege)
+console.log(omoreCollege)
 
-const DepaulUniversity = Object.create({}, {
+const depaulUniversity = Object.create({}, {
     business: {
         enumerable: true,
         writable: false,
@@ -56,7 +56,7 @@ const DepaulUniversity = Object.create({}, {
     }
 
 })
-console.log(DepaulUniversity)
+console.log(depaulUniversity)
 
 const ibmc = Object.create({}, {
     business: {
@@ -118,3 +118,39 @@ const oldNavy = Object.create({}, {
 })
 console.log(oldNavy)
 
+
+
+
+
+
+// Write a function that will build, and return, a job object. Make sure you define an argument for each one of the properties you want to be in the object.
+
+// const JobMaker = (a,r,g,u,m,e,n,t,s) {
+//     return theObjectYouBuilt
+// }
+
+const JobMaker = (business, employmentStart, employmentEnd, goodThings, badThings) => {
+    let theObjectYouBuilt = Object.create ({}, {
+        business: {
+            value: business
+        },
+        employmentStart: {
+            value: employmentStart
+        },
+        employmentEnd: {
+            value: employmentEnd
+        },
+        goodThings: {
+            value: goodThings
+        },
+        badThings: {
+            value: badThings
+        } 
+    });
+
+    return theObjectYouBuilt
+}
+
+let Job = JobMaker("store", "any", "date", "relaxed", "drive");
+
+console.log(Job);
